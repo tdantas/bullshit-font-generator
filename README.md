@@ -47,7 +47,12 @@ $ bfg-check
  echo whatever buzzword to bfg
 
  ````
- $ echo 'agile' | bullshit-font-generato
+$ echo 'bullshit' | bfg
+ Generating your bullshit font
+ Your new bullshit font /var/folders/ts/f7hynj517n54qg04_s0_4kv80000gn/T/72d883ef-b77d-4d5c-ba55-a94dd7f0cd20
+ 
+ # rename the 72d883ef-b77d-4d5c-ba55-a94dd7f0cd20 to whatever you want bullshit.ttf
+ 
  ````
  
  ````
