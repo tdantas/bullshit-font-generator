@@ -1,6 +1,6 @@
 {
   "name": "bullshit-font-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "generate brand new font with bullshit ligatures",
   "main": "index.js",
   "bin": {
@@ -8,6 +8,10 @@
     "bullshit-font-generator": "./bin/main.js",
     "bfg-check": "./bin/check-ttx.js",
     "bullshit-font-generator-check": "./bin/check-ttx.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tdantas/bullshit-font-generator.git"
   },
   "scripts": {
     "test": "tape test/*.js"
