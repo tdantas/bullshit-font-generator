@@ -4,6 +4,8 @@
 
 To use **bullshit-font-generator** your system MUST HAVE [ttx](https://github.com/behdad/fonttools/) installed.
 
+![usage](https://cdn.rawgit.com/tdantas/repository-assets/master/assets/bullshit-font-generator/buzz.gif)
+
 
 ````
 npm i -g bullshit-font-generator
