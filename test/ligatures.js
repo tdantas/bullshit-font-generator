@@ -41,11 +41,12 @@ test("generate for multiple word", function(t) {
   'email@domain.com',
   'snake_case',
   'word-with-ç' ].forEach(function(word) {
-    test("replace special character", function(t) {
+    test("replace special character " + word, function(t) {
       t.plan(1);
 
       var glyph = ligatures(word);
       var prefix = word.substring(0,1);
+      prefix = ligatures.CHAR_TABLE[prefix] || prefix;
 
       var transform = word.split('').map(function(c) {
         var subs = ligatures.CHAR_TABLE[c];
