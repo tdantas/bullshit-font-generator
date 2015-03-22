@@ -54,12 +54,15 @@ $ echo 'bullshit' | bfg
  # rename the 72d883ef-b77d-4d5c-ba55-a94dd7f0cd20 to whatever you want
  
 $ mv /some/tmp/folder/72d883ef-b77d-4d5c-ba55-a94dd7f0cd20 bullshit.ttf
+````
  
- ````
- 
- ````
- $ echo 'agile' | bfg
- ````
+
+you can specify the directory output and font name  
+
+````
+  $ echo 'nosql' | bfg -n bullshit.ttf -d /home
+````
+
 
 As **bfg** read from stdin you can type as many buzzwords as you want from your terminal, **CONTROL-D** will finish the list and start the font generation.
 
