@@ -40,7 +40,9 @@ test("generate for multiple word", function(t) {
   'red,blue',
   'email@domain.com',
   'snake_case',
-  'word-with-ç' ].forEach(function(word) {
+  'word-with-ç',
+  'some éáíóú',
+  'other ã õ'].forEach(function(word) {
     test("replace special character " + word, function(t) {
       t.plan(1);
 
