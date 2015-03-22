@@ -81,7 +81,9 @@ If you have a huge list the simple way is to create a file.
 
  ````
 
+## Credits
 
+[Thanks](https://github.com/RoelN/SansBullshitSans) for the amazing idea and the svgs.
 
 
 
