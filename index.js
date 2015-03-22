@@ -36,6 +36,7 @@ function bullshit(words, options, callback) {
       args.push('-o', filename);
 
     if (dir) {
+      dir = path.isAbsolute(dir) ? dir : path.join(__dirname, dir);
       args.push('-d', dir);
     }
 
