@@ -2,6 +2,15 @@
 
 var chalk = require('chalk');
 var readline = require('readline');
+var argv = require('yargs')
+  .alias('d', 'dir')
+  .alias('n', 'filename')
+  .argv;
+
+var options = {
+  dir: argv.d,
+  filename: argv.n
+};
 
 var bullshit = require('../');
 
@@ -17,7 +26,7 @@ rl.on('close', generateFont);
 
 function generateFont() {
   print('blue', 'Generating your bullshit font');
-  bullshit(words, show);
+  bullshit(words, options, show);
 }
 
 function show(err, font) {
