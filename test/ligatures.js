@@ -28,20 +28,6 @@ test("generate for multiple word", function(t) {
   t.ok(glyph.b[0].glyph, 'contains glyph property');
 });
 
-test("generate for multiple word", function(t) {
-  t.plan(6);
-  var glyph = ligatures(['agile', 'bigdata']);
-
-  t.ok(glyph.a.length === 1, 'returns an array with 1 component for agile');
-  t.ok(glyph.b.length === 1, 'returns an array with 1 component big-data');
-
-  t.deepEqual(glyph.a[0].value, 'gile'.split(''), 'contains value property');
-  t.ok(glyph.a[0].glyph, 'contains glyph property');
-
-  t.deepEqual(glyph.b[0].value, 'igdata'.split(''), 'contains value property');
-  t.ok(glyph.b[0].glyph, 'contains glyph property');
-});
-
 
 [ 'big-data',
   'c++',
