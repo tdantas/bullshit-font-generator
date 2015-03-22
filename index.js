@@ -8,13 +8,18 @@ module.exports = bullshit;
 
 var BIN = 'ttx';
 
-function bullshit(words, callback) {
+function bullshit(words, options, callback) {
   if (!Array.isArray(words))
     words = [ words ];
 
+  if ('function' === typeof options) {
+    callback = options;
+    options = { };
+  }
+
   var renderDir = os.tmpDir();
   var ligatureGlyphs = ligatures(words);
-  render(ligatureGlyphs, { dir: renderDir }, rendered);
+  render(ligatureGlyphs, { dir: renderDir, filename: options.filename }, rendered);
 
   function rendered(err, filename) {
     generate(filename, { cwd: renderDir }, then);

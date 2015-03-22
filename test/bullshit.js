@@ -17,3 +17,18 @@ var fs = require('fs');
     }
   });
 });
+
+ test("generate font with custom name", function (t) {
+  t.plan(2);
+
+  var name = 'bullshit-font-' + (+new Date());
+
+  bullshit('nosql', { filename: name }, verify);
+
+  function verify(err, path) {
+    t.ifError(err, 'without error');
+    console.log(path);
+    t.ok(path.indexOf(name) > -1);
+  }
+
+});
