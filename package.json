@@ -1,6 +1,6 @@
 {
   "name": "bullshit-font-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "generate brand new font with bullshit ligatures",
   "main": "index.js",
   "bin": {
@@ -21,7 +21,8 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "underscore": "^1.8.2",
-    "uuid": "^2.0.1"
+    "uuid": "^2.0.1",
+    "yargs": "^3.6.0"
   },
   "devDependencies": {
     "tape": "^3.5.0",
