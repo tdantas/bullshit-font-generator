@@ -1,5 +1,6 @@
 var test = require('tape');
 var ligatures = require('../lib/ligatures');
+var words = require('./words');
 
 test("generate for one word", function(t) {
   t.plan(5);
@@ -28,38 +29,24 @@ test("generate for multiple word", function(t) {
   t.ok(glyph.b[0].glyph, 'contains glyph property');
 });
 
+words.forEach(function(word) {
+  test("replace special character " + word, function(t) {
+    t.plan(1);
 
-[ 'big-data',
-  'c++',
-  'using<xml>',
-  'ruby&rails',
-  'some spaces',
-  'wat!',
-  'who?',
-  '1+1=2',
-  'red,blue',
-  'email@domain.com',
-  'snake_case',
-  'word-with-ç',
-  'some éáíóú',
-  'other ã õ'].forEach(function(word) {
-    test("replace special character " + word, function(t) {
-      t.plan(1);
+    var glyph = ligatures(word);
+    var prefix = word.substring(0,1);
+    prefix = ligatures.CHAR_TABLE[prefix] || prefix;
 
-      var glyph = ligatures(word);
-      var prefix = word.substring(0,1);
-      prefix = ligatures.CHAR_TABLE[prefix] || prefix;
+    var transform = word.split('').map(function(c) {
+      var subs = ligatures.CHAR_TABLE[c];
+      if (!subs)
+        return c;
 
-      var transform = word.split('').map(function(c) {
-        var subs = ligatures.CHAR_TABLE[c];
-        if (!subs)
-          return c;
-
-        return subs;
-      });
-
-      t.deepEqual(glyph[prefix][0].value, transform.slice(1), 'generated valid glyph for ' + word);
+      return subs;
     });
+
+    t.deepEqual(glyph[prefix][0].value, transform.slice(1), 'generated valid glyph for ' + word);
+  });
 });
 
 test("group by same prefix", function(t) {

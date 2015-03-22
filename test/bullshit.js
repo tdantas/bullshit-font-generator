@@ -2,7 +2,9 @@ var test = require('tape');
 var bullshit = require('../');
 var fs = require('fs');
 
-[ ['multiple', 'words'], 'just one word'].forEach(function(word) {
+var words = require('./words');
+
+[ words, 'just one word'].forEach(function(word) {
 
   test("generate ttf file with words: " + word, function (t) {
     t.plan(2);
