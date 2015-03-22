@@ -1,6 +1,6 @@
 {
   "name": "bullshit-font-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "generate brand new font with bullshit ligatures",
   "main": "index.js",
   "bin": {
