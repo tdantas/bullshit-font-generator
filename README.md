@@ -1,5 +1,7 @@
 #bullshit-font-generator
 
+### Thank you [ SansBullshitSans](https://github.com/RoelN/SansBullshitSans)
+
 ### Install
 
 To use **bullshit-font-generator** your system MUST HAVE [ttx](https://github.com/behdad/fonttools/) installed.
@@ -86,9 +88,7 @@ If you have a huge list the simple way is to create a file.
 
  ````
 
-## Credits
 
-[Thanks](https://github.com/RoelN/SansBullshitSans) for the amazing idea and the svgs.
 
 
 
