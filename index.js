@@ -8,7 +8,6 @@ var render = require('./lib/template');
 module.exports = bullshit;
 
 var BIN = 'ttx';
-
 function bullshit(words, options, callback) {
   if (!Array.isArray(words))
     words = [ words ];
@@ -36,7 +35,7 @@ function bullshit(words, options, callback) {
       args.push('-o', filename);
 
     if (dir) {
-      dir = path.isAbsolute(dir) ? dir : path.join(__dirname, dir);
+      dir = path.isAbsolute(dir) ? dir : path.join(process.cwd(), dir);
       args.push('-d', dir);
     }
 
