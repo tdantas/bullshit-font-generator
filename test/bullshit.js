@@ -27,7 +27,6 @@ var fs = require('fs');
 
   function verify(err, path) {
     t.ifError(err, 'without error');
-    console.log(path);
     t.ok(path.indexOf(name) > -1);
   }
 
