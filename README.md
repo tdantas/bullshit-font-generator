@@ -2,6 +2,9 @@
 
 ### Thank you [ SansBullshitSans](https://github.com/RoelN/SansBullshitSans)
 
+##### [Web](https://github.com/tdantas/bullshit-font-generator-web-example) example 
+
+
 ### Install
 
 To use **bullshit-font-generator** your system MUST HAVE [ttx](https://github.com/behdad/fonttools/) installed.
@@ -89,6 +92,5 @@ If you have a huge list the simple way is to create a file.
  ````
 
 
-#### Play with [web](https://github.com/tdantas/bullshit-font-generator-web-example) example 
 
 
